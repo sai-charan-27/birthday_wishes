@@ -1,0 +1,875 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+
+    color: #54273c;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255,255,255,.9),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(255,145,190,.35),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #ffd4e6 48%,
+            #f3a9ca
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* Small background dots */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .28;
+
+    background-image:
+        radial-gradient(
+            #fff 1px,
+            transparent 1px
+        );
+
+    background-size: 25px 25px;
+
+    z-index: 0;
+}
+
+
+/* ================= PAGES ================= */
+
+.page {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* ================= MUSIC BUTTON ================= */
+
+.music-btn {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 3000;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 12px 18px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d52f78,
+            #ed70a5
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(190,43,105,.35);
+
+    transition: .25s;
+}
+
+
+.music-btn:hover {
+
+    transform: scale(1.06);
+
+}
+
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page {
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 25px;
+}
+
+
+.login-card {
+
+    width: min(450px, 100%);
+
+    padding: 42px 35px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,.7);
+
+    border:
+        1px solid
+        rgba(255,255,255,.9);
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(113,31,69,.2);
+
+    backdrop-filter: blur(18px);
+
+    animation:
+        cardIn .8s ease;
+}
+
+
+.lock {
+
+    font-size: 55px;
+
+    margin-bottom: 8px;
+
+    animation:
+        pulse 1.8s infinite;
+}
+
+
+.small-title {
+
+    color: #b83870;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.login-card h1 {
+
+    font-size: 31px;
+
+    margin: 13px 0;
+}
+
+
+.login-card h1 span {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    color: #cf3175;
+
+    font-size: 1.3em;
+
+    font-weight: 400;
+}
+
+
+.login-text {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    opacity: .8;
+
+    margin-bottom: 25px;
+}
+
+
+form {
+
+    text-align: left;
+}
+
+
+label {
+
+    display: block;
+
+    margin: 13px 0 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+input {
+
+    width: 100%;
+
+    border:
+        1px solid
+        #edb2ca;
+
+    background:
+        rgba(255,255,255,.9);
+
+    padding: 14px 15px;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    font: inherit;
+
+    color: #54273c;
+}
+
+
+input:focus {
+
+    border-color: #d63b79;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(214,59,121,.1);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.main-btn,
+.secondary-btn,
+.nav-btn {
+
+    border: 0;
+
+    border-radius: 999px;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.main-btn {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px 22px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d52f78,
+            #ed70a5
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(191,43,105,.28);
+}
+
+
+.main-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 17px 35px
+        rgba(191,43,105,.4);
+}
+
+
+.small-button {
+
+    width: auto;
+
+    margin: 0;
+}
+
+
+.secondary-btn {
+
+    padding: 13px 20px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    color: #9b2f5f;
+
+    border:
+        1px solid
+        rgba(255,255,255,.9);
+}
+
+
+.secondary-btn:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+.nav-btn {
+
+    padding: 10px 18px;
+
+    color: #9c2f60;
+
+    background:
+        rgba(255,255,255,.75);
+}
+
+
+.error {
+
+    min-height: 20px;
+
+    margin-top: 10px;
+
+    color: #c32758;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+.hint {
+
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    opacity: .55;
+}
+
+
+/* Floating hearts */
+
+.floating-heart {
+
+    position: fixed;
+
+    color:
+        rgba(208,48,117,.35);
+
+    font-size: 80px;
+
+    animation:
+        float 5s ease-in-out infinite;
+}
+
+
+.heart1 {
+
+    left: 8%;
+
+    top: 20%;
+}
+
+
+.heart2 {
+
+    right: 8%;
+
+    bottom: 15%;
+
+    animation-delay:
+        1.2s;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.top-nav {
+
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.brand {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 31px;
+
+    color: #b72e6b;
+}
+
+
+/* ================= PHOTOS ================= */
+
+.photos-page {
+
+    padding-bottom: 70px;
+}
+
+
+.page-heading {
+
+    text-align: center;
+
+    padding:
+        35px 20px 45px;
+}
+
+
+.page-heading h2,
+.wishes-page h2 {
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    margin: 10px 0;
+}
+
+
+.page-heading p:last-child {
+
+    opacity: .7;
+}
+
+
+.gallery {
+
+    width: min(1050px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.photo-card {
+
+    padding: 9px;
+
+    margin: 0;
+
+    background:
+        rgba(255,255,255,.78);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(99,30,59,.15);
+
+    transition: .35s;
+
+    animation:
+        photoIn .7s ease both;
+}
+
+
+.photo-card:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(.4deg);
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 410px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 18px;
+}
+
+
+.photo-card figcaption {
+
+    padding:
+        14px 8px 9px;
+
+    text-align: center;
+
+    color: #a33465;
+
+    font-weight: 600;
+}
+
+
+.page-controls {
+
+    width: min(700px, 90%);
+
+    margin:
+        35px auto 0;
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+}
+
+
+/* ================= WISHES ================= */
+
+.wish-container {
+
+    width: min(850px, 92%);
+
+    margin: auto;
+
+    text-align: center;
+
+    padding:
+        35px 0 70px;
+}
+
+
+.cake {
+
+    font-size: 90px;
+
+    animation:
+        cakeFloat 2.5s
+        ease-in-out infinite;
+}
+
+
+.wishes-page h2 span {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    color: #cf3175;
+
+    font-weight: 400;
+}
+
+
+.wish-card {
+
+    padding: 42px;
+
+    border-radius: 32px;
+
+    background:
+        rgba(255,255,255,.68);
+
+    border:
+        1px solid
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 25px 65px
+        rgba(100,31,60,.16);
+
+    backdrop-filter: blur(16px);
+}
+
+
+.wish-card h3 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    color: #c82f70;
+
+    font-size: 38px;
+
+    margin-bottom: 18px;
+}
+
+
+.wish-card p {
+
+    line-height: 1.9;
+
+    margin-bottom: 16px;
+}
+
+
+.signature {
+
+    margin-top: 25px;
+
+    color: #c52f70;
+
+    font-weight: 700;
+}
+
+
+.celebrate-btn {
+
+    width: auto;
+
+    margin:
+        28px 8px 10px;
+}
+
+
+.wishes-page
+.secondary-btn {
+
+    margin: 10px 8px;
+}
+
+
+/* ================= CONFETTI ================= */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 2000;
+}
+
+
+/* ================= FIREWORKS ================= */
+
+#fireworksCanvas {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1900;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes cardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.95);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes photoIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-6deg);
+    }
+
+    50% {
+
+        transform:
+            translateY(-30px)
+            rotate(6deg);
+    }
+}
+
+
+@keyframes pulse {
+
+    0%, 100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.12);
+    }
+}
+
+
+@keyframes cakeFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .login-card {
+
+        padding:
+            35px 23px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .photo-card img {
+
+        height: 430px;
+    }
+
+
+    .page-controls {
+
+        flex-direction: column;
+    }
+
+
+    .page-controls
+    .main-btn {
+
+        width: 100%;
+    }
+
+
+    .wish-card {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .music-btn {
+
+        right: 12px;
+
+        bottom: 12px;
+    }
+
+}

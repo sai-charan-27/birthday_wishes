@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Poojitha 💗</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ================= MUSIC ================= -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" class="music-btn">
+        🎵 Music
+    </button>
+
+
+    <!-- ================= PAGE 1 : LOGIN ================= -->
+
+    <section id="loginPage" class="page login-page">
+
+        <div class="floating-heart heart1">♡</div>
+        <div class="floating-heart heart2">♥</div>
+
+        <div class="login-card">
+
+            <div class="lock">
+                🔐
+            </div>
+
+            <p class="small-title">
+                A PRIVATE LITTLE SURPRISE
+            </p>
+
+            <h1>
+                WELCOME
+                <span></span>
+                💗
+            </h1>
+
+            <p class="login-text">
+                This little website was made especially for you.
+            </p>
+
+
+            <form id="loginForm">
+
+                <label>
+                    Username
+                </label>
+
+                <input type="text" id="username" placeholder="Enter your name" autocomplete="off">
+
+
+                <label>
+                    Password
+                </label>
+
+                <input type="password" id="password" placeholder="Enter the secret password">
+
+
+                <button type="submit" class="main-btn">
+                    Unlock My Surprise 🎁
+                </button>
+
+                <p id="loginError" class="error"></p>
+
+            </form>
+
+
+            <p class="hint">
+                Hint: your name + Date Of Birth ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PAGE 2 : PHOTOS ================= -->
+
+    <section id="photosPage" class="page photos-page hidden">
+
+        <nav class="top-nav">
+
+            <div class="brand">
+                Poojitha 💗
+            </div>
+
+            <button class="nav-btn" onclick="showPage('wishesPage')">
+                Next →
+            </button>
+
+        </nav>
+
+
+        <div class="page-heading">
+
+            <p class="small-title">
+
+            </p>
+
+            <h2>
+                HAPPY BIRTHDAY POOJITHA💖
+            </h2>
+
+            <p>
+                A little collection of a cute girl
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <figure class="photo-card">
+
+                <img src="princess.jpeg" alt="Poojitha">
+
+                <figcaption>
+                    little princess✨
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="photo-card">
+
+                <img src="poojitha.1.jpeg" alt="Poojitha">
+
+                <figcaption>
+                    Simply beautiful 💗
+                </figcaption>
+
+            </figure>
+
+
+
+            <figure class="photo-card">
+
+                <img src="poojitha2.jpeg" alt="Poojitha">
+
+                <figcaption>
+                    the eyes✨
+                </figcaption>
+
+            </figure>
+
+
+
+            <figure class="photo-card">
+
+                <img src="poojitha3.jpeg" alt="Poojitha">
+
+                <figcaption>
+                    the smile 🌸
+                </figcaption>
+
+            </figure>
+
+
+
+            <figure class="photo-card">
+
+                <img src="poojitha4.jpeg" alt="Poojitha">
+
+                <figcaption>
+                    the cuteness💖✨
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="photo-card">
+
+                <img src="poojitha.5.jpeg" alt="Poojitha">
+
+                <figcaption>
+                   💖💖💖
+                </figcaption>
+
+            </figure>
+
+            <figure class="photo-card">
+
+                <img src="poojitha.6.jpeg" alt="Poojitha">
+
+                <figcaption>
+                    favourite person ✨
+                </figcaption>
+
+            </figure>
+
+            <figure class="photo-card">
+
+                <img src="poojitha7.jpeg" alt="Poojitha">
+
+                <figcaption>
+                  the sweetest one..
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="page-controls">
+
+            <button class="secondary-btn" onclick="showPage('loginPage')">
+                ← Back
+            </button>
+
+
+            <button class="main-btn small-button" onclick="showPage('wishesPage')">
+                Go to Wishes 💌
+            </button>
+
+        </div>
+
+        
+
+    </section>
+
+
+
+    <!-- ================= PAGE 3 : WISHES ================= -->
+
+    <section id="wishesPage" class="page wishes-page hidden">
+
+        <nav class="top-nav">
+
+            <div class="brand">
+                For Poojitha 💗
+            </div>
+
+            <button class="nav-btn" onclick="showPage('photosPage')">
+                ← Photos
+            </button>
+
+        </nav>
+
+
+        <div class="wish-container">
+
+
+            <div class="cake">
+                🎂
+            </div>
+
+
+            <p class="small-title">
+                Have A Cake
+            </p>
+
+
+            <h2>
+                Happy Birthday
+                <span>Poojitha!</span>
+                🎉 
+            </h2>
+
+
+
+            <div class="wish-card">
+
+                <h3>
+                    Dear Poojitha💗
+                </h3>
+
+
+                <p>
+                    Wishing you a very Happy Birthday!
+                    May this special day bring you lots of
+                    happiness, laughter and beautiful memories.
+                </p>
+
+
+                <p>
+                    You are truly my favourite person,
+                    and I hope the year ahead is filled with
+                    wonderful moments, success and everything
+                    that makes you smile.
+                </p>
+
+
+                <p>
+                    Keep smiling, keep shining and always
+                    stay the amazing person you are.
+                    Have the happiest birthday ever! ✨
+                </p>
+
+
+                <p>
+                May your special day be
+                    surrounded by the people who care about you most, bringing warmth, fun, and memories you will
+                    treasure forever. As you begin another exciting year of life, may it bring you success in everything
+                    you do, excellent health, inner peace, confidence, and many new opportunities to grow and shine.
+                    Keep smiling, stay positive, and continue being the kind, amazing, and inspiring person you are. May
+                    every dream in your heart and every goal you work toward gradually become reality. Never forget how
+                    special and valued you are, not only today but every day. Enjoy your celebration to the fullest, eat
+                    plenty of delicious cake, take lots of pictures, dance, laugh, and create unforgettable memories
+                    with your loved ones. May the coming year be brighter, happier, and more exciting than ever before.
+                    Once again, Happy Birthday, Poojitha! May your day be magical and your year ahead be absolutely
+                    fantastic! 🎂✨
+                </p>
+
+
+                <div class="signature">
+                    With lots of birthday wishes 💕
+                </div>
+
+            </div>
+
+
+
+            <button class="main-btn celebrate-btn" onclick="celebrateEverything()">
+                🎆 Celebrate!
+            </button>
+
+
+            <br>
+
+
+            <button class="secondary-btn" onclick="showPage('photosPage')">
+                ← Back to Photos
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= EFFECT CANVASES ================= -->
+
+    <canvas id="confetti"></canvas>
+
+    <canvas id="fireworksCanvas"></canvas>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
